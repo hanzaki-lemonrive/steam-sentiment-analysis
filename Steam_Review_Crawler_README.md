@@ -1,119 +1,114 @@
-### **Steam Review Crawler User Guide / Steam评论爬虫使用说明**
+Steam Review Crawler / Steam评论爬虫
+中文说明
+项目概述
+这是一个用于从Steam平台抓取游戏评论的Python爬虫工具，可将数据保存为CSV格式。
 
----
+功能特点
+支持分页获取全部评论
 
-### **1. 基本使用方法 / Basic Usage**
+自动去重处理
 
-**中文**
+定期保存检查点
 
-1. 确保安装Python 3.6+
-2. 安装依赖库：`pip install requests pandas`
-3. 直接运行脚本即可爬取《火箭联盟》的英文评论
-4. 结果会保存为`RLHotel_YYYYMMDD_HHMMSS.csv`文件
+完善的错误处理机制
 
-**English**
+可自定义请求参数
 
-1. Ensure Python 3.6+ is installed
-2. Install dependencies: `pip install requests pandas`
-3. Run the script to crawl English reviews for Rocket League
-4. Results will be saved as `RLHotel_YYYYMMDD_HHMMSS.csv`
+使用说明
+环境要求
 
----
+Python 3.6+
 
-### **2. 更换游戏 / Changing Games**
+安装依赖库：
+```
+pip install requests pandas
+```
+配置参数
 
-**中文**
+修改appid为目标游戏ID
 
-修改代码第12行的`appid`：
+调整params中的参数：
 
-python
+day_range: 时间范围
 
-复制
+language: 评论语言
+
+num_per_page: 每页数量
+
+运行程序
 
 ```
-appid = "435120"  # 改为目标游戏的Steam ID
+python steam_review_crawler.py
 ```
 
-**如何查找游戏ID**：
+输出文件
 
-- 访问Steam商店页面，URL中`app/`后的数字就是ID
-- 示例：《Dota 2》的商店页为`store.steampowered.com/app/570`，ID就是570
+检查点文件: checkpoint_xxx.csv
 
-**English**
+最终结果: steam_reviews_[appid]_final.csv
 
-Modify the `appid` in line 12:
+注意事项
 
-python
+请遵守Steam的robots.txt规则
 
-复制
+合理设置请求间隔(默认1.5秒)
+
+商业用途需获得Valve授权
+
+English Description
+Project Overview
+A Python crawler tool for scraping game reviews from Steam platform, saving data in CSV format.
+
+Key Features
+Pagination support for complete review collection
+
+Automatic duplicate removal
+
+Periodic checkpoint saving
+
+Robust error handling
+
+Customizable request parameters
+
+Usage Instructions
+Requirements
+
+Python 3.6+
+
+Install dependencies:
 
 ```
-appid = "435120"  # Change to target game's Steam ID
+pip install requests pandas
 ```
 
-**How to find Game ID**:
+Configuration
 
-- Visit Steam store page, the number after `app/` in URL is the ID
-- Example: Dota 2's page is `store.steampowered.com/app/570`, so ID is 570
+Modify appid to target game ID
 
----
+Adjust parameters in params:
 
-### **3. 自定义筛选条件 / Custom Filters**
+day_range: Time range filter
 
-| **参数 Parameter** | **中文选项** | **English Options** | **修改位置 Line #** |
-| --- | --- | --- | --- |
-| `language` | 语言（如"schinese"） | Language (e.g. "english") | 14 |
-| `day_range` | 时间范围（天） | Day range (max: 365) | 17 |
-| `review_type` | "all"/"positive"/"negative" | 同上 | 15 |
-| `num_per_page` | 每页评论数（max:100） | Reviews per page | 18 |
+language: Review language
 
----
+num_per_page: Items per page
 
-### **4. 注意事项 / Important Notes**
+Execution
 
-**中文**
+```
+python steam_review_crawler.py
+```
 
-- 请勿设置`time.sleep()`低于1秒，否则可能被封IP
-- 大量爬取建议使用代理IP
-- 默认只爬取90天内的评论（修改`day_range`可调整）
-- 如需完整历史评论，需多次修改日期范围分段爬取
+Output Files
 
-**English**
+Checkpoint files: checkpoint_xxx.csv
 
-- Never set `time.sleep()` below 1s to avoid IP ban
-- Use proxy IPs for large-scale crawling
-- Default crawls last 90 days only (modify `day_range`)
-- For full history, crawl in date segments
+Final results: steam_reviews_[appid]_final.csv
 
----
+Important Notes
 
-### **5. 输出文件格式 / Output Format**
+Comply with Steam's robots.txt rules
 
-| **字段 Field** | **中文说明** | **English Description** |
-| --- | --- | --- |
-| ReviewID | 评论唯一ID | Unique review ID |
-| UserID | 用户Steam ID | User's Steam ID |
-| content | 评论文本 | Review text content |
-| time | 评论时间（YYYY-MM-DD HH:MM:SS） | Timestamp |
-| vote | "upvote"(推荐)/"downvote"(不推荐) | Review type |
-| playtime_hrs | 用户游戏时长（小时） | Playtime in hours |
+Maintain reasonable request intervals (default 1.5s)
 
----
-
-### **6. 常见问题 / Troubleshooting**
-
-**Q: 没有生成CSV文件 / No CSV generated**
-
-- 检查是否出现错误（控制台红字）
-- 可能网络问题导致没有获取到数据
-
-**Q: 想爬取其他语言评论 / Other languages**
-
-修改`language`参数，例如：
-
-- 简体中文: `schinese`
-- 法语: `french`
-
-**Q: 如何续爬中断的任务 / Resume interrupted crawl**
-
-保存并重用最后的`cursor`值即可继续
+Commercial use requires Valve's authorization
