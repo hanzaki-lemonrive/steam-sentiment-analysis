@@ -1,20 +1,20 @@
-Steam Review Crawler / Steam评论爬虫
-中文说明
-项目概述
+# Steam Review Crawler / Steam评论爬虫
+## 中文说明
+### 项目概述
 这是一个用于从Steam平台抓取游戏评论的Python爬虫工具，可将数据保存为CSV格式。
 
-功能特点
-支持分页获取全部评论
+### 功能特点
+1. 支持分页获取全部评论
 
-自动去重处理
+2. 自动去重处理
 
-定期保存检查点
+3. 定期保存检查点
 
-完善的错误处理机制
+4.完善的错误处理机制
 
-可自定义请求参数
+5. 可自定义请求参数
 
-使用说明
+### 使用说明
 环境要求
 
 Python 3.6+
@@ -35,19 +35,18 @@ language: 评论语言
 
 num_per_page: 每页数量
 
-运行程序
-
+**运行程序**
 ```
 python steam_review_crawler.py
 ```
 
-输出文件
+**输出文件**
 
 检查点文件: checkpoint_xxx.csv
 
-最终结果: steam_reviews_[appid]_final.csv
+**最终结果**: steam_reviews_[appid]_final.csv
 
-注意事项
+### 注意事项
 
 请遵守Steam的robots.txt规则
 
@@ -55,33 +54,34 @@ python steam_review_crawler.py
 
 商业用途需获得Valve授权
 
-English Description
-Project Overview
+## English Description
+
+### Project Overview
 A Python crawler tool for scraping game reviews from Steam platform, saving data in CSV format.
 
-Key Features
-Pagination support for complete review collection
+### Key Features
+1. Pagination support for complete review collection
 
-Automatic duplicate removal
+2. Automatic duplicate removal
 
-Periodic checkpoint saving
+3. Periodic checkpoint saving
 
-Robust error handling
+4. Robust error handling
 
-Customizable request parameters
+5. Customizable request parameters
 
-Usage Instructions
-Requirements
+### Usage Instructions
+**Requirements**
 
 Python 3.6+
 
-Install dependencies:
+**Install dependencies**:
 
 ```
 pip install requests pandas
 ```
 
-Configuration
+**Configuration**
 
 Modify appid to target game ID
 
@@ -93,19 +93,19 @@ language: Review language
 
 num_per_page: Items per page
 
-Execution
+**Execution**
 
 ```
 python steam_review_crawler.py
 ```
 
-Output Files
+**Output Files**
 
 Checkpoint files: checkpoint_xxx.csv
 
-Final results: steam_reviews_[appid]_final.csv
+**Final results**: steam_reviews_[appid]_final.csv
 
-Important Notes
+### Important Notes
 
 Comply with Steam's robots.txt rules
 
