@@ -1,6 +1,6 @@
 # Steam Player_Nicknames Crawler
 
-This script is designed to fetch player nicknames (with acquired SteamID) from Steam using the Steam API and save the results to a CSV file.
+As the initial review information acquired through Steam API won't directly provide the usernames (personaname), this script is designed to fetch player nicknames (with acquired SteamID) from ISteamUser (through GetPlayerSummaries). The results would be saved to a CSV file.
 
 # Table of Contents
 1. [Introduction](#introduction)
