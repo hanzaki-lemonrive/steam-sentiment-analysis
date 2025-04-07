@@ -1,9 +1,9 @@
 # Steam Player_Nicknames Crawler
 
-As the initial review information acquired through Steam API won't directly provide the usernames (personaname), this script is designed to fetch player nicknames (with acquired SteamID) from ISteamUser (through GetPlayerSummaries). The results would be saved to a CSV file.
+As the initial review information acquired through Steam API won't directly provide the usernames (personaname), this script is designed to fetch player nicknames (with acquired SteamID) through Steam API.
 
 # Table of Contents
-1. [Introduction](#introduction)
+1. [Functionality](#functionality)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
 4. [Usage](#usage)
@@ -11,14 +11,14 @@ As the initial review information acquired through Steam API won't directly prov
 6. [Error Handling](#error-handling)
 7. [License](#license)
 
-## Introduction
-This script leverages the Steam API to retrieve player nicknames based on a list of Steam IDs. It then saves the retrieved nicknames along with their corresponding Steam IDs to a CSV file. This can be useful for data collection, player identification, or any other purpose where player nicknames are required.
+## Functionality
+This script leverages ISteamUser (through GetPlayerSummaries) to retrieve player nicknames based on a list of Steam IDs. It then saves the retrieved nicknames along with their corresponding Steam IDs to a CSV file.
 
 ## Prerequisites
-1. Python 3.x
-2. `requests` library (install using `pip install requests`)
-3. A Steam API key (obtainable from the [Steam API Key Registration page](https://steamcommunity.com/dev/apikey))
-4. A list of Steam IDs
+- Python 3.x
+- `requests` library (install using `pip install requests`)
+- A Steam API key (obtainable from the [Steam API Key Registration page](https://steamcommunity.com/dev/apikey))
+- A list of Steam IDs
 
 ## Installation
 1. Ensure you have Python 3.x installed on your system.
