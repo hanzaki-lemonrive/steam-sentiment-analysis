@@ -9,7 +9,6 @@ Personanames returned from won't keep the original order of the provided SteamID
 4. [Usage](#usage)
 5. [Example](#example)
 6. [Error Handling](#error-handling)
-8. [License](#license)
 
 ## Functionality
 The script reads two input files (one containing the original Steam IDs and another has the disordered nicknames and their corresponding userIDs), then aligns the nicknames along with their IDs in accordance to the sequence in the other file, and saves the aligned version to a new Excel (.xlsx) file.
@@ -63,6 +62,3 @@ After running the script, the output file `sorted_nicknames.xlsx` will contain:
 
 ## Error Handling
 The script includes checks for duplicate Steam IDs in the nickname file. If duplicates are found, they will be printed to the console. Additionally, the script handles cases where a Steam ID in the original file does not have a corresponding nickname by assigning "Unknown".
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
