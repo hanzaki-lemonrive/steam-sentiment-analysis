@@ -2,7 +2,7 @@
 
 Personanames returned from won't keep the original order of the provided SteamIDs. Therefore, this script is designed to re-arrange the sequence of the nicknames to align with IDs listed in the sample.
 
-# Contents
+## Contents
 1. [Functionality](#functionality)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
