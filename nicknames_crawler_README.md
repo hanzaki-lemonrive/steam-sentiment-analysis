@@ -2,7 +2,7 @@
 
 As the initial review information acquired through Steam API won't directly provide the usernames (personaname), this script is designed to fetch player nicknames (with acquired SteamID) through Steam API.
 
-# Table of Contents
+# Contents
 1. [Functionality](#functionality)
 2. [Prerequisites](#prerequisites)
 3. [Installation](#installation)
