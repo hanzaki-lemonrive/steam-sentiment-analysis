@@ -1,2 +1,2 @@
 # steam-sentiment-analysis
-For kcl data collection and analysis
+For group project of module Data Collection and Analysis.
