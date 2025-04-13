@@ -9,7 +9,6 @@ As the initial review information acquired through Steam API won't directly prov
 4. [Usage](#usage)
 5. [Example](#example)
 6. [Error Handling](#error-handling)
-7. [License](#license)
 
 ## Functionality
 This script leverages ISteamUser (through GetPlayerSummaries) to retrieve player nicknames based on a list of Steam IDs. It then saves the retrieved nicknames along with their corresponding Steam IDs to a CSV file.
@@ -40,6 +39,3 @@ The script will output the player nicknames to the console and save them to a CS
 
 ## Error Handling
 The script includes basic error handling for HTTP request failures. If an error occurs during the API request, an error message will be printed to the console, and an empty dictionary will be returned.
-
-## License
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for details.
